@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}{% endblock %}
+    <style>
+        body{
+            width: 800px;
+            margin: 0px auto;
+        }
+
+        table {
+            width: 100%;
+            border: none;
+            border-spacing: 0;
+        }
+
+        table tr td{
+            border: 0.5px solid grey;
+            border-collapse: collapse;
+            padding:5px 10px;
+        }
+    </style>
+</head>
+<body>
+    {% block header %}{% endblock %}
+    <section class="content">
+    {% block content %}{% endblock %}
+    </section>
+</body>
+</html>

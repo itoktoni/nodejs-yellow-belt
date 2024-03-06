@@ -1,0 +1,37 @@
+{% extends "layouts.html" %}
+
+{% block title %}
+<title>Contact List</title>
+{% endblock %}
+
+{% block header %}
+<h1>Contact List</h1>
+{% endblock %}
+
+{% block content %}
+
+<table>
+  <tr>
+    <td>ID</td>
+    <td>Name</td>
+    <td>Email</td>
+    <td>Phone</td>
+    <td>Action</td>
+  </tr>
+  {% for item in contacts %}
+  <tr>
+    <td>{{ item.id }}</td>
+    <td>{{ item.name }}</td>
+    <td>{{ item.email }}</td>
+    <td>{{ item.phone }}</td>
+    <td><a href="/edit/{{ item.id }}">Edit</a></td>
+  </tr>
+  {% else %}
+  Data Empty
+  {% endfor %}
+</table>
+
+<br>
+<a href="/add">Add Contact</a>
+
+{% endblock %}
